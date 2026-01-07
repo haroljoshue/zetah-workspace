@@ -173,6 +173,12 @@ h1::after {
     }
 }
 
+/* ========= OCULTAR CONTENIDO ========= */
+
+.video-list,
+.photo-list {
+    display: none;
+    }
 
 /* ========= VIDEOS ========= */
 .video-list {
