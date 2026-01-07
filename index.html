@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZetaH Gallery</title>
+
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="estilo/estilo.css">
+
+    <!-- Ícono de la página -->
+    <link rel="icon" href="recursos/ico_blanco.png" type="image/png">
+</head>
+
+<body>
+    <!-- Encabezado con logo y barra de botones -->
+    <header class="header">
+        <img src="recursos/titulo.png" alt="Título de la Página">
+
+    </header>
+
+    <div class="button-bar">
+        <!-- Barra de botones -->
+        <button onclick="openSideWindow('contacto')">Contacto</button>
+        <button onclick="openSideWindow('quien')">¿Quién es ZetaH?</button>
+        <button onclick="openSideWindow('redes')">Redes Sociales</button>
+    </div>
+
+    <!-- Ventana lateral emergente -->
+    <div class="side-window" id="side-window">
+        <button class="close-btn" onclick="closeSideWindow()">✖</button>
+        <div id="side-content"></div>
+    </div>
+
+    <main class="content">
+        <h1>AUDIOVISUALES</h1>
+
+        <!-- Lista de videos cargados desde JSON -->
+        <div class="video-list" id="video-container"></div>
+
+        <br>
+        <h1>FOTOGRAFÍAS</h1>
+
+
+        <!-- Galería de imágenes desde Google Drive -->
+        <div class="photo-list" id="gallery"></div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-info">
+            <p>Ecuador, Imbabura, Ibarra</p>
+            <p>+593 99 232 3613</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/haroljoshue/" target="_blank">
+                    <img src="recursos/logo_i.png" alt="Instagram" class="social-icon"
+                        data-img="recursos/instagram_big.png">
+                </a>
+                <a href="https://www.facebook.com/Zambrano2005" target="_blank">
+                    <img src="recursos/logo_f.png" alt="Facebook" class="social-icon"
+                        data-img="recursos/facebook_big.png">
+                </a>
+                <a href="https://w.app/l469ab" target="_blank">
+                    <img src="recursos/logo_wtp.png" alt="WhatsApp" class="social-icon"
+                        data-img="recursos/whatsapp_big.png">
+                </a>
+            </div>
+        </div>
+
+        <div>
+            <h1>Mañana será otro día</h1>
+        </div>
+
+        <div class="footer-image">
+            <img id="main-icon" src="recursos/ico.png" alt="Logo ico">
+        </div>
+    </footer>
+
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="script/script.js"></script>
+</body>
+
+</html>
