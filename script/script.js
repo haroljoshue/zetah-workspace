@@ -37,6 +37,39 @@ async function loadData() {
     }
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  // cargar datos apenas entra
+  loadData();
+
+  const buttons = document.querySelectorAll(".toggle-btn");
+
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      const targetId = btn.getAttribute("data-target");
+      const section = document.getElementById(targetId);
+      if (!section) return;
+
+      const isHidden =
+        section.style.display === "" || section.style.display === "none";
+
+      // respetar grid para tus listas
+      if (isHidden) {
+        section.style.display = "grid";
+      } else {
+        section.style.display = "none";
+      }
+
+      // cambiar texto del botón
+      if (targetId === "video-container") {
+        btn.textContent = isHidden ? "Ocultar audiovisuales" : "Ver audiovisuales";
+      } else if (targetId === "gallery") {
+        btn.textContent = isHidden ? "Ocultar fotografías" : "Ver fotografías";
+      }
+    });
+  });
+});
+
+
 // cargar datos al iniciar
 document.addEventListener("DOMContentLoaded", loadData);
 
