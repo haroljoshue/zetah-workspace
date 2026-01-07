@@ -242,6 +242,58 @@ h1::after {
     border-radius: 14px;
 }
 
+/* ========= DESPLIEGUE DE DATOS ========= */
+
+.toggle-btn {
+  margin: 12px 0 22px;
+  padding: 8px 20px;
+  border-radius: 999px;
+  border: 1px solid #4b5563;
+  background: #020617;
+  color: #e5e7eb;
+  cursor: pointer;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition:
+    background 0.18s ease,
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
+}
+
+.toggle-btn::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f97316, #ec4899, #a855f7, #38bdf8);
+}
+
+.toggle-btn:hover {
+  background: #030712;
+  border-color: #a855f7;
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.4);
+  transform: translateY(-1px);
+}
+
+.toggle-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 0 10px rgba(15, 23, 42, 0.9);
+}
+
+@media (max-width: 480px) {
+  .toggle-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
+
 /* ========= RESPONSIVE ========= */
 @media (max-width: 900px) {
 
